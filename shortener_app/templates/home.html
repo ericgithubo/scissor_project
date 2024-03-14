@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/scissors/css/base.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/scissors/css/bootstrap.css') }}">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .navbar-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin-right: 20px;
+  }
+
+  .navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-links li a:hover {
+    color: lightblue;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .login-btn, .register-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .login-btn:hover, .register-btn:hover {
+    background-color: #fff;
+    color: #333;
+  }
+</style>
+<title>Horizontal Navbar</title>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="navbar-logo">
+    <img src="logo.png" alt="Short Url">
+  </div>
+
+  <ul class="navbar-links">
+    <li><a href="/urls">History</a></li>
+    <li><a href="#">Analytics</a></li>
+    <li><a href="/short">Short URL</a></li>
+    <li><a href="/download-qrcode">Download QR Code</a></li>
+  </ul>
+
+  <div class="navbar-right">
+    <button class="login-btn">
+      <a href="/user/logout">logout</a>
+    </button>
+
+</div>
+
+</body>
+</html>

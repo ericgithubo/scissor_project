@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/scissors/css/base.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/scissors/css/bootstrap.css') }}">
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: white;
+            color:blue;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo img {
+            max-width: 100px;
+            height: auto;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .login-btn, .register-btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border-radius: 5px;
+            
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .login-btn:hover, .register-btn:hover {
+            background-color: #fff;
+            color: blue;
+        }
+        .container {
+            margin: 20px;
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 20px);
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card:last-child {
+            margin-right: 0;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        #url{
+            font-size: 55px;
+            text-align: center;
+            font-weight: bolder;
+        }
+        p{
+            font-size: 35px;
+        }
+</style>
+<title>Horizontal Navbar</title>
+</head>
+<body>
+
+    <div class="navbar">
+      <div class="navbar-logo">
+        <img src="logo.png" alt="Welcome to Scissor">
+      </div>
+      <div class="navbar-right">
+        <button class="login-btn">
+          <a href="/user/login">Login</a>
+        </button>
+        <button class="register-btn">
+          <a href="/user/register">Register</a>
+        </button>
+      </div>
+    </div>
+    
+    <div class="container">
+      <p id="url">Welcome to Scissor, a URL shortening application that allows you to generate short and memorable URLs for your long links.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Analytics</h3>
+          <p>View detailed analytics of your shortened URLs, including click counts, geographic locations, and more.</p>
+        </div>
+        <div class="card">
+          <h3>History</h3>
+          <p>Access your complete history of shortened URLs along with their analytics data.</p>
+        </div>
+        <div class="card">
+          <h3>Download QR Code</h3>
+          <p>Generate and download QR codes for your shortened URLs for easy sharing and access.</p>
+        </div>
+        <div class="card">
+          <h3>Short URL/Custom URL</h3>
+          <p>Create short URLs for your long links or customize them to make them more memorable.</p>
+        </div>
+      </div>
+    </div>
+    
+    </body>
+    </html>
+    
